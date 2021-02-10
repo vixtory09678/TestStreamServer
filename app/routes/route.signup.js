@@ -5,7 +5,7 @@ const cors = require('cors')
 const signupController = require('../controller/controller.signup')
 
 // validate reqest
-const validate = require('../validator/validator.validate')
+const {validate} = require('../validator/validator.validate')
 const {signupProfessional} = require('../validator/validator.schema_signup')
 
 router.use(cors({
