@@ -1,0 +1,13 @@
+@url_base = http://127.0.0.1:3000
+
+# @name createLive
+POST {{url_base}}/live/create
+content-type: application/json
+
+{
+  "live_name": "ทำยังไงดี เย่ ๆ",
+  "invest_category": "cypto",
+  "live_photo_cover": "http://www.googel.com",
+  "is_private": false,
+  "description": "เอ้าเร่เข้ามา เร่เข้ามาาาา เย่"
+}

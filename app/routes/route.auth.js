@@ -5,17 +5,13 @@ module.exports = (admin) => {
 
   const router = express.Router()
 
-  router.use(cors({
-    origin: true,
-    methods: ['*'],
-    allowedHeaders: ['Content-Type', 'Authorization'],
-    preflightContinue: true
-  }))
-
+  router.use(cors())
+  
   router.use((req, res, next) => {
-    if (req.header.authtoken) {
-      admin.auth().verifyIdToken(req.header.authtoken)
-        .then(()=>{
+    if (req.headers.authtoken) {
+      admin.auth().verifyIdToken(req.headers.authtoken)
+        .then((decodeToken)=>{
+          console.log('pass ', decodeToken.uid)
           next()
         }).catch(()=>{
           res.status(403).send('Unauthorized!')

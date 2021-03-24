@@ -2,10 +2,6 @@ const Joi = require('@hapi/joi')
 
 const CustomJoi = Joi.extend(require('joi-phone-number'))
 
-const signup_register = {
-
-}
-
 const signupProfessional = {
   user_id: Joi.string().required(),
   full_name: Joi.string().required(),

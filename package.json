@@ -20,6 +20,6 @@
     "helmet": "^4.4.1",
     "joi-phone-number": "^5.0.0",
     "morgan": "1.10.0",
-    "node-media-server": "^2.2.4"
+    "uuid": "8.3.2"
   }
 }
